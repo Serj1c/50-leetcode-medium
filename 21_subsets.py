@@ -14,4 +14,17 @@ def subsets(nums):
 
 print(subsets([1,2,3]))
 print(subsets([0]))
+
+
+def subsets2(nums):
+    res = [[]]
+
+    for num in nums:
+        res += [subset + [num] for subset in res]
+
+    return res
+
+
+print(subsets2([1,2,3]))
+print(subsets2([0]))
     
